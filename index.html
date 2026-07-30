@@ -14,6 +14,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Adobe Fonts, used only for the Domus Aurea wordmark in the header and
+     footer: Jana Thork and Kepler Std, matching the podcast and course covers.
+     NOTE: Adobe Fonts kits are domain-locked. sienafallsmedia.com must be on
+     this kit's allowed-domains list at fonts.adobe.com (My Projects), or these
+     two faces silently fall back to Cormorant Garamond. Everything else on the
+     page is served by Google Fonts above and is unaffected either way. -->
+<link rel="stylesheet" href="https://use.typekit.net/iqd4eob.css">
+
 <!-- Marks the document so the reveal CSS only hides content when JavaScript is
      running to reveal it again. With JS off, everything renders normally. -->
 <script>document.documentElement.className += ' js';</script>
@@ -112,15 +120,20 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .site-logo { display: flex; align-items: baseline; gap: 0.55rem; }
 .site-logo__mark {
-  font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--text);
+  /* Jana Thork is an uncial and reads small, so it sits a little larger and
+     looser than the Cormorant it replaces. Falls back to Cormorant if the
+     Adobe kit is not authorized for this domain. */
+  font-family: "jana-thork", var(--serif);
+  font-size: 1.5rem; font-weight: 400; letter-spacing: 0.03em;
+  line-height: 1; color: var(--text);
 }
 .site-logo__divider {
   width: 1px; height: 14px; background: var(--neutral);
   display: inline-block; opacity: 0.6;
 }
 .site-logo__sub {
-  font-family: var(--sans); font-size: 0.58rem; font-weight: 300;
-  letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-80);
+  font-family: "kepler-std", var(--serif); font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue-80);
 }
 
 /* ── Buttons ────────────────────────────────────────────────── */
@@ -416,10 +429,11 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   padding: 3rem 0 2.5rem; text-align: center;
 }
 .site-footer__mark {
-  font-family: var(--serif); font-size: 1.2rem; font-weight: 500; margin-bottom: 0.4rem;
+  font-family: "jana-thork", var(--serif); font-size: 1.45rem; font-weight: 400;
+  letter-spacing: 0.03em; line-height: 1; margin-bottom: 0.5rem;
 }
 .site-footer__tag {
-  font-family: var(--sans); font-size: 0.58rem; font-weight: 300;
+  font-family: "kepler-std", var(--serif); font-size: 0.68rem; font-weight: 400;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--blue-80); margin-bottom: 1.5rem;
 }
@@ -550,9 +564,9 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 <header class="site-header">
   <div class="wrap">
     <a class="site-logo" href="/">
-      <span class="site-logo__mark">House of Gold</span>
+      <span class="site-logo__mark">Domus Aurea</span>
       <span class="site-logo__divider"></span>
-      <span class="site-logo__sub">Domus Aurea</span>
+      <span class="site-logo__sub">House of Gold</span>
     </a>
     <a href="#waitlist" class="btn btn--ghost">Join the Waitlist</a>
   </div>
@@ -892,8 +906,8 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 <!-- ════ FOOTER ════ -->
 <footer class="site-footer">
   <div class="wrap">
-    <p class="site-footer__mark">House of Gold</p>
-    <p class="site-footer__tag">Domus Aurea</p>
+    <p class="site-footer__mark">Domus Aurea</p>
+    <p class="site-footer__tag">House of Gold</p>
     <p class="site-footer__links">
       <a href="/">Home</a>
       <a href="/podcast">Podcast</a>
