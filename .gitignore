@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Never commit these
+*.env
+config.php
+*.key
+*.pem
