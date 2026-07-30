@@ -474,12 +474,8 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 
     <div class="hero__image">
       <div>
-        <!-- Swap the placeholder for the real image when the course photo is chosen.
-             Genevieve's headshot lives at teamphotos/Genevieve-Kineke.jpg.webp -->
-        <div class="hero__image-placeholder">
-          Course image<br>4 : 5 portrait
-        </div>
-        <p class="hero__caption">Spiritual Maternity &middot; Autumn 2026</p>
+        <img src="cover.jpg" width="880" height="1100"
+             alt="Spiritual Maternity: The Vocation of Every Woman, a six-week live study with Genevieve Kineke. The Visitation, from a twelfth-century Aquitaine psalter.">
       </div>
     </div>
   </div>
@@ -773,14 +769,18 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
     </p>
 
     <!-- ═══ KIT FORM · uid 62ddea07c5 ═══
-         Posts natively to Kit so the House of Gold styling is preserved
-         instead of Kit's own embedded form styles. The JS at the bottom of
-         this file upgrades it to an inline thank-you; with JS off, the plain
-         POST still works and Kit shows its own confirmation page. -->
+         Keeps House of Gold styling instead of Kit's embedded form styles.
+
+         The form posts straight to Kit but targets the hidden iframe below,
+         so the browser performs a real cross-origin form POST (always allowed,
+         no CORS involved) and this page never navigates away. A background
+         fetch() was tried first and is blocked by CORS, including from
+         file:// pages, so do not switch back to it. -->
     <form class="signup__form"
           id="waitlist-form"
           action="https://app.kit.com/forms/62ddea07c5/subscriptions"
           method="post"
+          target="kit-target"
           data-sv-form="62ddea07c5"
           data-uid="62ddea07c5">
       <label for="wl-name" style="position:absolute;left:-9999px;">First name</label>
@@ -791,6 +791,9 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 
       <button type="submit">Tell Me When It Opens</button>
     </form>
+
+    <iframe name="kit-target" id="kit-target" title="Kit signup target"
+            style="display:none;width:0;height:0;border:0;" aria-hidden="true"></iframe>
 
     <div class="signup__success" id="waitlist-success" hidden>
       <p class="signup__success-title">You are on the list.</p>
@@ -823,45 +826,28 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 </footer>
 
 <script>
-/* Submits the waitlist to Kit in the background and swaps in an inline
-   thank-you, so the woman is never bounced off the page. If anything fails,
-   it falls back to a normal form post and Kit handles it. */
+/* The form itself posts to Kit through the hidden iframe, so the submission
+   happens whether or not this script runs. All this does is swap the form for
+   an inline thank-you afterwards, so she is never bounced to Kit's own page.
+   Note there is deliberately no preventDefault: the native POST is what
+   actually reaches Kit. */
 (function () {
   var form    = document.getElementById('waitlist-form');
   var success = document.getElementById('waitlist-success');
   var fine    = document.getElementById('waitlist-fine');
-  if (!form || !window.fetch) return;
+  if (!form) return;
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
+  form.addEventListener('submit', function () {
     var button = form.querySelector('button');
-    var old    = button.textContent;
     button.disabled = true;
     button.textContent = 'One moment';
 
-    var existing = form.parentNode.querySelector('.signup__error');
-    if (existing) existing.parentNode.removeChild(existing);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function (res) {
-      if (!res.ok) throw new Error('Kit returned ' + res.status);
+    /* Give the POST time to leave the browser before hiding the form. */
+    window.setTimeout(function () {
       form.hidden = true;
       if (fine) fine.hidden = true;
       if (success) success.hidden = false;
-    })
-    .catch(function () {
-      button.disabled = false;
-      button.textContent = old;
-      var msg = document.createElement('p');
-      msg.className = 'signup__error';
-      msg.textContent = 'That did not go through. Please try once more, or write to us and we will add you by hand.';
-      form.parentNode.insertBefore(msg, fine);
-    });
+    }, 1200);
   });
 })();
 </script>
