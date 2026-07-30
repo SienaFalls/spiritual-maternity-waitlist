@@ -12,49 +12,49 @@ The page itself works identically with or without the tags.
 **Instagram bio link**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=bio_link
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=bio_link
 ```
 
 **Instagram story / link sticker**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=story
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=story
 ```
 
 **Instagram feed post**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=feed_post
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=instagram&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=feed_post
 ```
 
 **Facebook post**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=facebook&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=page_post
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=facebook&utm_medium=social&utm_campaign=spiritual_maternity&utm_content=page_post
 ```
 
 **Personal emails to friends**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=email&utm_medium=email&utm_campaign=spiritual_maternity&utm_content=friends_outreach
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=email&utm_medium=email&utm_campaign=spiritual_maternity&utm_content=friends_outreach
 ```
 
 **My Secret is Mine newsletter**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=msim
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=msim
 ```
 
 **Domus Aurea newsletter**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=domusaurea
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=domusaurea
 ```
 
 **Edith Stein novena emails**
 
 ```
-https://sienafallsmedia.com/domusaurea/spiritual-maternity/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=novena
+https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/?utm_source=substack&utm_medium=newsletter&utm_campaign=spiritual_maternity&utm_content=novena
 ```
 
 ## Making more

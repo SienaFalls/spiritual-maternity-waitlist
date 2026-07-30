@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Domus Aurea</title>
+<meta name="description" content="What Domus Aurea collects, why, and how to have it removed.">
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/iqd4eob.css">
+
+<style>
+:root {
+  --bg:         #FFFFFF;
+  --surface:    #F7F5F1;
+  --neutral:    #D0AA5A;
+  --neutral-40: #E8E2D6;
+  --neutral-20: #F2EFE9;
+  --text:       #1E1008;
+  --meta:       #6A5040;
+  --meta-60:    #A6968C;
+  --blue:       #284268;
+  --blue-80:    #536080;
+  --blue-40:    #A9B3C3;
+  --blue-10:    #EAECF0;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Jost', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 17px; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--serif); font-weight: 400; line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--blue-40); }
+a:hover { text-decoration-color: var(--blue); }
+
+.wrap { max-width: 1140px; margin-inline: auto; padding-inline: 2rem; }
+.page { max-width: 720px; margin-inline: auto; padding: 3.5rem 2rem 5rem; }
+
+/* Header, matching the landing page */
+.marian-band { background: var(--blue); padding: 0.45rem 0; text-align: center; }
+.marian-band p {
+  font-family: var(--serif); font-size: 0.78rem; font-weight: 300; font-style: italic;
+  color: rgba(234,224,196,0.85); letter-spacing: 0.04em;
+}
+.marian-band .stars { letter-spacing: 0.3em; opacity: 0.55; font-style: normal; font-size: 0.55rem; vertical-align: middle; margin: 0 0.6rem; }
+
+.site-header { background: var(--surface); border-bottom: 1px solid var(--neutral-40); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 2rem; }
+.site-logo { display: flex; align-items: baseline; gap: 0.55rem; text-decoration: none; }
+.site-logo__mark {
+  font-family: "jana-thork", var(--serif); font-size: 1.5rem; font-weight: 400;
+  letter-spacing: 0.03em; line-height: 1; color: var(--text);
+}
+.site-logo__divider { width: 1px; height: 14px; background: var(--neutral); display: inline-block; opacity: 0.6; }
+.site-logo__sub {
+  font-family: "kepler-std", var(--serif); font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue-80);
+}
+.nav-back {
+  font-family: var(--sans); font-size: 0.68rem; font-weight: 400;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--blue); border: 1px solid var(--blue-40);
+  padding: 0.4rem 1.1rem; text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.nav-back:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* Body */
+.eyebrow {
+  font-family: var(--sans); font-size: 0.6rem; font-weight: 300;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue-80);
+  margin-bottom: 1rem;
+}
+h1 {
+  font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 300; line-height: 1.15; margin-bottom: 0.7rem;
+}
+.updated {
+  font-family: var(--sans); font-size: 0.62rem; font-weight: 300;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--meta-60);
+}
+.rule { width: 36px; height: 1px; background: var(--neutral); margin: 1.75rem 0 2.25rem; }
+
+h2 {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+  line-height: 1.25; margin: 2.75rem 0 0.9rem;
+  padding-bottom: 0.5rem; border-bottom: 1px solid var(--neutral-40);
+}
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul { list-style: none; margin: 0 0 1.3rem; }
+li {
+  font-size: 1.05rem; line-height: 1.65;
+  padding: 0.45rem 0 0.45rem 1.4rem; position: relative;
+}
+li::before {
+  content: '\2726'; position: absolute; left: 0; top: 0.72rem;
+  font-size: 0.5rem; color: var(--neutral);
+}
+
+.callout {
+  background: var(--blue-10); border-left: 3px solid var(--blue);
+  padding: 1.4rem 1.6rem; margin: 1.75rem 0;
+  font-size: 1.08rem; font-style: italic; color: var(--text);
+}
+
+.plain {
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 300;
+  color: var(--meta); line-height: 1.9;
+  background: var(--neutral-20); border: 1px solid var(--neutral-40);
+  padding: 1.2rem 1.4rem; margin-top: 2.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--surface); border-top: 1px solid var(--neutral-40);
+  padding: 3rem 0 2.5rem; text-align: center;
+}
+.site-footer__mark {
+  font-family: "jana-thork", var(--serif); font-size: 1.45rem; font-weight: 400;
+  letter-spacing: 0.03em; line-height: 1; margin-bottom: 0.5rem;
+}
+.site-footer__tag {
+  font-family: "kepler-std", var(--serif); font-size: 0.68rem; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-80); margin-bottom: 1.5rem;
+}
+.site-footer__links {
+  font-family: var(--sans); font-size: 0.64rem; font-weight: 300;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--meta);
+}
+.site-footer__links a { margin: 0 0.7rem; text-decoration: none; color: var(--meta); }
+.site-footer__links a:hover { color: var(--blue); }
+.site-footer__legal {
+  font-family: var(--sans); font-size: 0.58rem; font-weight: 300;
+  color: var(--meta-60); margin-top: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  html { font-size: 16px; }
+  .wrap, .page { padding-inline: 1.5rem; }
+  .site-header .wrap { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="marian-band">
+  <div class="wrap">
+    <p><span class="stars">&#10022; &#10022; &#10022;</span>Tota pulchra es, Maria<span class="stars">&#10022; &#10022; &#10022;</span></p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html">
+      <span class="site-logo__mark">Domus Aurea</span>
+      <span class="site-logo__divider"></span>
+      <span class="site-logo__sub">House of Gold</span>
+    </a>
+    <a href="index.html" class="nav-back">Back to the Study</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <p class="eyebrow">Legal</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: July 30, 2026</p>
+  <div class="rule"></div>
+
+  <p>
+    This page is published by Secretum Meum Mihi Press LLC. The short version:
+    we ask for your name and email so we can tell you when registration opens,
+    and we count visitors so we know whether anyone is finding the page. That is
+    the whole of it.
+  </p>
+
+  <div class="callout">
+    We do not sell, rent, or trade your personal information. Not to advertisers,
+    not to other ministries, not to anyone.
+  </div>
+
+  <h2>What we collect</h2>
+
+  <p>Two things, and they are separate from each other.</p>
+
+  <p><strong>When you join the waitlist,</strong> we collect the first name and
+  email address you type into the form. Nothing else. We do not ask for and do
+  not receive payment information on this page.</p>
+
+  <p><strong>When you simply visit,</strong> we collect anonymous usage
+  information through Google Analytics: which pages were viewed, roughly what
+  part of the world the visit came from, what kind of device was used, and which
+  link brought you here. This is counted in aggregate. It does not tell us who
+  you are, and we do not try to connect it to your email address.</p>
+
+  <h2>Cookies</h2>
+
+  <p>
+    Google Analytics sets cookies in your browser so that returning visits are
+    not counted twice. That is what they are for here. You can block or delete
+    them in your browser settings at any time, and the page will work exactly as
+    it does now.
+  </p>
+  <p>
+    If you would rather not be counted at all, Google publishes a browser
+    add-on that opts you out of Analytics everywhere:
+    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.
+  </p>
+
+  <h2>How we use what you give us</h2>
+
+  <p>Your email address is used to:</p>
+  <ul>
+    <li>Tell you when registration for the study opens</li>
+    <li>Send you occasional news from Domus Aurea and House of Gold</li>
+  </ul>
+  <p>
+    That is all. Every email includes an unsubscribe link that works in one
+    click, and we would genuinely rather you unsubscribe than stay on a list you
+    do not want to be on.
+  </p>
+
+  <h2>Who else handles your information</h2>
+
+  <p>
+    We use two services, and each one holds only what it needs:
+  </p>
+  <ul>
+    <li><a href="https://kit.com/privacy" target="_blank" rel="noopener">Kit</a>, formerly ConvertKit, stores the email list and sends the emails.</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Analytics</a> counts visits. It never receives your name or email address.</li>
+  </ul>
+
+  <h2>Your rights</h2>
+
+  <p>Wherever you live, you may:</p>
+  <ul>
+    <li>Ask what information we hold about you</li>
+    <li>Ask us to correct it</li>
+    <li>Ask us to delete it entirely</li>
+    <li>Withdraw your consent by unsubscribing, at any time, without explanation</li>
+  </ul>
+  <p>
+    Residents of the European Union and the United Kingdom have further rights
+    under the GDPR, including data portability and the right to complain to your
+    national data protection authority. California residents have rights under
+    the CCPA, including the right to know what is collected and to request
+    deletion. We honor these requests from everyone, not only where the law
+    requires it.
+  </p>
+  <p>
+    To exercise any of this, write to
+    <a href="mailto:hello@houseofgold.net">hello@houseofgold.net</a> and we will
+    take care of it.
+  </p>
+
+  <h2>How long we keep it</h2>
+
+  <p>
+    We keep your email address for as long as you are subscribed. If you
+    unsubscribe, you come off the active list. If you ask us to delete you
+    outright, we do, and it is gone. Analytics data expires automatically after
+    fourteen months.
+  </p>
+
+  <h2>Children</h2>
+
+  <p>
+    This page is written for adult women and is not directed at children. We do
+    not knowingly collect information from anyone under 16.
+  </p>
+
+  <h2>Changes to this policy</h2>
+
+  <p>
+    If anything material changes, we will update the date at the top of this
+    page rather than quietly editing the text.
+  </p>
+
+  <p class="plain">
+    Questions about any of this: <a href="mailto:hello@houseofgold.net">hello@houseofgold.net</a>.
+    We are a very small publication and a real person will read it.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="site-footer__mark">Domus Aurea</p>
+    <p class="site-footer__tag">House of Gold</p>
+    <p class="site-footer__links">
+      <a href="index.html">The Study</a>
+      <a href="https://mysecretismine.substack.com">My Secret is Mine</a>
+      <a href="privacy.html">Privacy</a>
+    </p>
+    <p class="site-footer__legal">&copy; 2026 Secretum Meum Mihi Press LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
