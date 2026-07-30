@@ -343,47 +343,58 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   color: rgba(234,224,196,0.8); max-width: 520px;
   margin: 0 auto 2.5rem; line-height: 1.7;
 }
-.signup__form {
-  display: flex; gap: 0.75rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap;
-}
-.signup__form input[type="text"],
-.signup__form input[type="email"] {
-  flex: 1 1 180px; min-width: 0;
-  font-family: var(--serif); font-size: 1rem; font-weight: 400;
-  padding: 0.85rem 1rem; color: var(--text);
-  background: #fff; border: 1px solid var(--blue-40);
-}
-.signup__form input::placeholder { color: var(--meta-60); font-style: italic; }
-.signup__form button {
-  flex: 0 0 auto;
-  background: var(--neutral); color: var(--text);
-  border: 1px solid var(--neutral);
-  font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
-  letter-spacing: 0.13em; text-transform: uppercase;
-  padding: 0.85rem 2rem; cursor: pointer;
-  transition: background 0.2s;
-}
-.signup__form button:hover { background: #e0be79; }
 .signup__fine {
   font-family: var(--sans); font-size: 0.62rem; font-weight: 300;
   letter-spacing: 0.05em; color: var(--blue-40);
   margin-top: 1.5rem; line-height: 1.8;
 }
-.signup__form button:disabled { opacity: 0.55; cursor: default; }
-.signup__success { max-width: 520px; margin: 0 auto; }
-.signup__success-title {
-  font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
-  font-style: italic; color: var(--neutral); margin-bottom: 0.7rem;
+
+/* ── Kit embed ───────────────────────────────────────────────
+   Kit's script injects its own markup and inline styles. These rules
+   nudge it toward the House of Gold palette. Kit sets much of this
+   inline, so !important is required; it is not laziness.
+   If Kit changes their class names this section stops applying and the
+   form reverts to their default styling. It will still work. */
+.kit-embed { max-width: 520px; margin: 0 auto; }
+.kit-embed .formkit-form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: 100% !important;
 }
-.signup__success-text {
-  font-family: var(--serif); font-size: 1.02rem; font-weight: 300;
-  color: rgba(234,224,196,0.85); line-height: 1.7;
+.kit-embed .formkit-field,
+.kit-embed .formkit-input {
+  font-family: var(--serif) !important;
+  font-size: 1rem !important;
+  padding: 0.85rem 1rem !important;
+  color: var(--text) !important;
+  background: #fff !important;
+  border: 1px solid var(--blue-40) !important;
+  border-radius: 0 !important;
 }
-.signup__error {
-  font-family: var(--sans); font-size: 0.68rem; font-weight: 300;
-  letter-spacing: 0.05em; color: #f0c9c2;
-  max-width: 520px; margin: 1.1rem auto 0;
+.kit-embed .formkit-input::placeholder { color: var(--meta-60) !important; font-style: italic !important; }
+.kit-embed .formkit-submit,
+.kit-embed .formkit-submit > span {
+  background: var(--neutral) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--neutral) !important;
+  border-radius: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  padding: 0.85rem 2rem !important;
 }
+.kit-embed .formkit-submit:hover,
+.kit-embed .formkit-submit:hover > span { background: #e0be79 !important; }
+.kit-embed .formkit-alert,
+.kit-embed .formkit-guarantee,
+.kit-embed .formkit-powered-by-convertkit,
+.kit-embed [data-element="powered-by"] { color: var(--blue-40) !important; }
+.kit-embed .formkit-header,
+.kit-embed .formkit-subheader { color: rgba(234,224,196,0.85) !important; }
 
 /* ── Footer ─────────────────────────────────────────────────── */
 .site-footer {
@@ -426,7 +437,7 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   .section { padding: 3.25rem 0; }
   .wrap, .wrap--narrow { padding-inline: 1.5rem; }
   .site-header .wrap { justify-content: center; }
-  .signup__form button { flex: 1 1 100%; }
+  .kit-embed .formkit-submit { width: 100% !important; }
 }
 </style>
 </head>
@@ -764,42 +775,18 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
       before it goes out to anyone else.
     </p>
 
-    <!-- ═══ KIT FORM · uid 62ddea07c5 ═══
-         Keeps House of Gold styling instead of Kit's embedded form styles.
-
-         The form posts straight to Kit but targets the hidden iframe below,
-         so the browser performs a real cross-origin form POST (always allowed,
-         no CORS involved) and this page never navigates away. A background
-         fetch() was tried first and is blocked by CORS, including from
-         file:// pages, so do not switch back to it. -->
-    <form class="signup__form"
-          id="waitlist-form"
-          action="https://app.kit.com/forms/62ddea07c5/subscriptions"
-          method="post"
-          target="kit-target"
-          data-sv-form="62ddea07c5"
-          data-uid="62ddea07c5">
-      <label for="wl-name" style="position:absolute;left:-9999px;">First name</label>
-      <input id="wl-name" type="text" name="fields[first_name]" placeholder="First name" autocomplete="given-name">
-
-      <label for="wl-email" style="position:absolute;left:-9999px;">Email address</label>
-      <input id="wl-email" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
-
-      <button type="submit">Tell Me When It Opens</button>
-    </form>
-
-    <iframe name="kit-target" id="kit-target" title="Kit signup target"
-            style="display:none;width:0;height:0;border:0;" aria-hidden="true"></iframe>
-
-    <div class="signup__success" id="waitlist-success" hidden>
-      <p class="signup__success-title">You are on the list.</p>
-      <p class="signup__success-text">
-        Watch for a note from Genevieve when registration opens. Nothing else
-        until then.
-      </p>
+    <!-- ═══ KIT EMBED · uid 62ddea07c5 ═══
+         Kit's own script renders and submits the form, so signups are handled
+         entirely by Kit. Everything the form looks like is controlled in the
+         Kit dashboard; the CSS in .kit-embed above only nudges their markup
+         toward the House of Gold palette. Do not replace this with a
+         hand-built form posting to app.kit.com: that was tried and no
+         submissions landed. -->
+    <div class="kit-embed">
+      <script async data-uid="62ddea07c5" src="https://my-secret-is-mine.kit.com/62ddea07c5/index.js"></script>
     </div>
 
-    <p class="signup__fine" id="waitlist-fine">
+    <p class="signup__fine">
       One email when registration opens, and nothing else you did not ask for.
       Unsubscribe whenever you like.
     </p>
@@ -820,33 +807,6 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
     <p class="site-footer__legal">&copy; 2026 House of Gold. All rights reserved.</p>
   </div>
 </footer>
-
-<script>
-/* The form itself posts to Kit through the hidden iframe, so the submission
-   happens whether or not this script runs. All this does is swap the form for
-   an inline thank-you afterwards, so she is never bounced to Kit's own page.
-   Note there is deliberately no preventDefault: the native POST is what
-   actually reaches Kit. */
-(function () {
-  var form    = document.getElementById('waitlist-form');
-  var success = document.getElementById('waitlist-success');
-  var fine    = document.getElementById('waitlist-fine');
-  if (!form) return;
-
-  form.addEventListener('submit', function () {
-    var button = form.querySelector('button');
-    button.disabled = true;
-    button.textContent = 'One moment';
-
-    /* Give the POST time to leave the browser before hiding the form. */
-    window.setTimeout(function () {
-      form.hidden = true;
-      if (fine) fine.hidden = true;
-      if (success) success.hidden = false;
-    }, 1200);
-  });
-})();
-</script>
 
 </body>
 </html>
