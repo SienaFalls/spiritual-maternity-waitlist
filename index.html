@@ -386,6 +386,18 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   letter-spacing: 0.05em; color: var(--blue-40);
   margin-top: 1.5rem; line-height: 1.8;
 }
+.signup__fallback {
+  font-family: var(--sans); font-size: 0.6rem; font-weight: 300;
+  letter-spacing: 0.05em; color: var(--blue-40);
+  margin-top: 0.9rem;
+}
+.signup__fallback a {
+  color: rgba(234,224,196,0.85);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(234,224,196,0.35);
+}
+.signup__fallback a:hover { color: var(--neutral); text-decoration-color: var(--neutral); }
 
 /* ── Kit embed ───────────────────────────────────────────────
    Kit's script injects its own markup and inline styles. These rules
@@ -926,6 +938,14 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
     <p class="signup__fine">
       One email when registration opens, and nothing else you did not ask for.
       Unsubscribe whenever you like.
+    </p>
+
+    <!-- Fallback: if a content blocker or a script failure stops Kit's embed
+         from rendering, this plain link still reaches the hosted form. It is
+         deliberately quiet, and it costs nothing when the embed works. -->
+    <p class="signup__fallback">
+      Form not loading?
+      <a href="https://my-secret-is-mine.kit.com/62ddea07c5">Join the waitlist here.</a>
     </p>
   </div>
 </section>
