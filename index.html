@@ -296,6 +296,16 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   color: var(--meta); background: var(--neutral-20);
   border: 1px solid var(--neutral-40); padding: 0.32rem 0.7rem;
 }
+/* Jost draws its typographic quotes as straight vertical wedges, so a correct
+   &ldquo; still reads as a typewriter quote inside these chips. Setting just
+   the marks in Cormorant restores the curl; the words keep the sans treatment. */
+.session__points .q {
+  font-family: var(--serif);
+  font-size: 1.25em;
+  letter-spacing: 0;
+  line-height: 0;
+  vertical-align: -0.02em;
+}
 
 /* ── For-you list ───────────────────────────────────────────── */
 .foryou { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2.5rem; }
@@ -750,7 +760,7 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
           <ul class="session__points">
             <li>Mary’s <em>fiat</em> untouched by sin</li>
             <li>The Virgin brings forth the Messiah</li>
-            <li>Mercy and the &ldquo;Sun of Justice&rdquo;</li>
+            <li>Mercy and the <span class="q">&ldquo;</span>Sun of Justice<span class="q">&rdquo;</span></li>
           </ul>
         </div>
       </article>
