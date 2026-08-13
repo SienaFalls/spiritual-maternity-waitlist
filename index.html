@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Under Mary’s Mantle: The Feminine Soul | A Six-Week Study with Genevieve Kineke</title>
-<meta name="description" content="Under Mary’s Mantle: The Feminine Soul. A six-week live study with Genevieve Kineke on spiritual maternity, the vocation of every woman, whether or not she is a wife, a mother, or a religious sister. Thursdays, September 24 to October 29, 2026. Join the waitlist.">
+<meta name="description" content="Under Mary’s Mantle: The Feminine Soul. A six-week live study with Genevieve Kineke on spiritual maternity, the vocation of every woman, whether or not she is a wife, a mother, or a religious sister. Thursdays, September 24 to October 29, 2026. Registration is open.">
 
 <meta property="og:title" content="Under Mary’s Mantle: The Feminine Soul">
-<meta property="og:description" content="A six-week live study with Genevieve Kineke. Thursdays, September 24 to October 29. Join the waitlist.">
+<meta property="og:description" content="A six-week live study with Genevieve Kineke. Thursdays, September 24 to October 29. Registration is open, $59, twenty-five seats.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://sienafallsmedia.com/domusaurea/spiritual-maternity-waitlist/cover.jpg">
 <meta property="og:image:width" content="1080">
@@ -168,6 +168,10 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 .btn--primary:hover { background: var(--blue-80); border-color: var(--blue-80); }
 .btn--ghost { background: transparent; color: var(--blue); border: 1px solid var(--blue-40); }
 .btn--ghost:hover { background: var(--blue-10); }
+/* Gold variant, for use on the blue register band where blue-on-blue would vanish. */
+.btn--gold { background: var(--neutral); color: var(--text); border: 1px solid var(--neutral); }
+a.btn--gold, a.btn--gold:visited, a.btn--gold:hover { color: var(--text); }
+.btn--gold:hover { background: #e0be79; border-color: #e0be79; }
 
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
@@ -412,65 +416,6 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   letter-spacing: 0.05em; color: var(--blue-40);
   margin-top: 1.5rem; line-height: 1.8;
 }
-.signup__fallback {
-  font-family: var(--sans); font-size: 0.6rem; font-weight: 300;
-  letter-spacing: 0.05em; color: var(--blue-40);
-  margin-top: 0.9rem;
-}
-.signup__fallback a {
-  color: rgba(234,224,196,0.85);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(234,224,196,0.35);
-}
-.signup__fallback a:hover { color: var(--neutral); text-decoration-color: var(--neutral); }
-
-/* ── Kit embed ───────────────────────────────────────────────
-   Kit's script injects its own markup and inline styles. These rules
-   nudge it toward the House of Gold palette. Kit sets much of this
-   inline, so !important is required; it is not laziness.
-   If Kit changes their class names this section stops applying and the
-   form reverts to their default styling. It will still work. */
-.kit-embed { max-width: 520px; margin: 0 auto; }
-.kit-embed .formkit-form {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  max-width: 100% !important;
-}
-.kit-embed .formkit-field,
-.kit-embed .formkit-input {
-  font-family: var(--serif) !important;
-  font-size: 1rem !important;
-  padding: 0.85rem 1rem !important;
-  color: var(--text) !important;
-  background: #fff !important;
-  border: 1px solid var(--blue-40) !important;
-  border-radius: 0 !important;
-}
-.kit-embed .formkit-input::placeholder { color: var(--meta-60) !important; font-style: italic !important; }
-.kit-embed .formkit-submit,
-.kit-embed .formkit-submit > span {
-  background: var(--neutral) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--neutral) !important;
-  border-radius: 0 !important;
-  font-family: var(--sans) !important;
-  font-size: 0.68rem !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.13em !important;
-  text-transform: uppercase !important;
-  padding: 0.85rem 2rem !important;
-}
-.kit-embed .formkit-submit:hover,
-.kit-embed .formkit-submit:hover > span { background: #e0be79 !important; }
-.kit-embed .formkit-alert,
-.kit-embed .formkit-guarantee,
-.kit-embed .formkit-powered-by-convertkit,
-.kit-embed [data-element="powered-by"] { color: var(--blue-40) !important; }
-.kit-embed .formkit-header,
-.kit-embed .formkit-subheader { color: rgba(234,224,196,0.85) !important; }
 
 /* ── Footer ─────────────────────────────────────────────────── */
 .site-footer {
@@ -519,16 +464,14 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
   .section { padding: 3.25rem 0; }
   .wrap, .wrap--narrow { padding-inline: 1.5rem; }
   .site-header .wrap { justify-content: center; }
-  .kit-embed .formkit-submit { width: 100% !important; }
+  .signup .btn { width: 100%; }
 }
 
 /* ── Reveal on scroll ────────────────────────────────────────
    Elements marked .reveal start slightly low and transparent, then settle
    when they scroll into view. Everything is gated behind .js so the page
    renders complete with JavaScript off, and behind the reduced-motion
-   query so it stays still for anyone who has asked for that. The Kit form
-   is deliberately never animated: it is third-party markup and moving it
-   risks breaking the one thing on this page that must work. */
+   query so it stays still for anyone who has asked for that. */
 
 .js .reveal {
   opacity: 0;
@@ -621,7 +564,7 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
       <span class="site-logo__divider"></span>
       <span class="site-logo__sub">House of Gold</span>
     </a>
-    <a href="#waitlist" class="btn btn--ghost">Join the Waitlist</a>
+    <a href="https://my-secret-is-mine.kit.com/products/under-the-mantle-of-mary-the-feminine-" class="btn btn--ghost">Register</a>
   </div>
 </header>
 
@@ -643,7 +586,7 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
         Six sessions on Zoom &middot; Small group
       </p>
       <div class="hero__actions">
-        <a href="#waitlist" class="btn btn--primary">Join the Waitlist</a>
+        <a href="https://my-secret-is-mine.kit.com/products/under-the-mantle-of-mary-the-feminine-" class="btn btn--primary">Register &middot; $59</a>
         <a href="#sessions" class="btn btn--ghost">See the Six Sessions</a>
       </div>
     </div>
@@ -935,45 +878,32 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
     <p style="font-family:var(--sans);font-size:0.7rem;font-weight:300;letter-spacing:0.06em;color:var(--meta-60);margin-top:1.75rem;line-height:1.9;">
       This is the first time the course has been taught, and $59 is the founding
       cohort price. The group is capped at twenty-five women. The six sessions run
-      Thursday evenings, September 24 through October 29. Registration opens Monday,
-      August 10, the day after the feast of St. Teresa Benedicta. Because the group
-      is capped, the waitlist hears first.
+      Thursday evenings, September 24 through October 29. Registration is open now,
+      and closes when the twenty-five seats are taken.
     </p>
   </div>
 </section>
 
-<!-- ════ WAITLIST ════ -->
-<section class="signup" id="waitlist">
+<!-- ════ REGISTER ════ -->
+<section class="signup" id="register">
   <div class="wrap--narrow">
-    <p class="signup__eyebrow">Registration opens August 10</p>
-    <h2 class="signup__title">Twenty-five seats. <em>The list hears first.</em></h2>
+    <p class="signup__eyebrow">Registration is open</p>
+    <h2 class="signup__title">Twenty-five seats. <em>Thursdays this fall.</em></h2>
     <p class="signup__sub">
-      Leave your name and we will write to you on August 10, the morning
-      registration opens, before it goes out to anyone else.
+      Six sessions, September 24 through October 29, with a copy of
+      <em>The Authentic Catholic Woman</em> included. Fifty-nine dollars,
+      the founding cohort price.
     </p>
 
-    <!-- ═══ KIT EMBED · uid 62ddea07c5 ═══
-         Kit's own script renders and submits the form, so signups are handled
-         entirely by Kit. Everything the form looks like is controlled in the
-         Kit dashboard; the CSS in .kit-embed above only nudges their markup
-         toward the House of Gold palette. Do not replace this with a
-         hand-built form posting to app.kit.com: that was tried and no
-         submissions landed. -->
-    <div class="kit-embed">
-      <script async data-uid="62ddea07c5" src="https://my-secret-is-mine.kit.com/62ddea07c5/index.js"></script>
-    </div>
+    <!-- Registration and payment are handled on the Kit product page. Nothing
+         is collected here, so there is no form and no script on this section. -->
+    <p>
+      <a href="https://my-secret-is-mine.kit.com/products/under-the-mantle-of-mary-the-feminine-" class="btn btn--gold">Register &middot; $59</a>
+    </p>
 
     <p class="signup__fine">
-      One email when registration opens, and nothing else you did not ask for.
-      Unsubscribe whenever you like.
-    </p>
-
-    <!-- Fallback: if a content blocker or a script failure stops Kit's embed
-         from rendering, this plain link still reaches the hosted form. It is
-         deliberately quiet, and it costs nothing when the embed works. -->
-    <p class="signup__fallback">
-      Form not loading?
-      <a href="https://my-secret-is-mine.kit.com/62ddea07c5">Join the waitlist here.</a>
+      Payment is handled by Kit. The Zoom link and the handouts come by email
+      before the first session.
     </p>
   </div>
 </section>
@@ -997,8 +927,7 @@ a.btn--primary, a.btn--primary:visited, a.btn--primary:hover { color: #fff; }
 <script>
 /* Marks elements for the scroll reveal and unveils them as they arrive.
    The markup carries no animation classes: they are all added here, so
-   removing this script returns the page to a plain static document.
-   The Kit form is never touched. */
+   removing this script returns the page to a plain static document. */
 (function () {
   var root = document.documentElement;
 

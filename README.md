@@ -1,14 +1,21 @@
-# Spiritual Maternity — Waitlist Landing Page
+# Under Mary's Mantle — Course Landing Page
 
-Waitlist page for **Spiritual Maternity: The Vocation of Every Woman**, a six-week
-live study taught by Genevieve Kineke for House of Gold.
+Landing page for **Under Mary's Mantle: The Feminine Soul**, a six-week live
+study taught by Genevieve Kineke for House of Gold. Thursdays, September 24
+through October 29, 2026, at 7:30 pm Eastern. Twenty-five seats, $59.
+
+The folder is still named `spiritual-maternity-waitlist` and the page is still
+served from that path. Renaming it would break every tracking link already
+circulating, so the name stays even though the page is no longer a waitlist.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `index.html` | The page. Self-contained: no build step, no dependencies. |
-| `cover.jpg` | Course cover, 880 × 1100, shown in the hero. |
+| `cover.jpg` | Course cover, 1080 × 1350, shown in the hero and used as the OG image. |
+| `privacy.html` | Privacy notice, linked from the footer. |
+| `TRACKING-LINKS.md` | UTM-tagged links for each placement, and how to read them in Analytics. |
 
 Open `index.html` in a browser, or serve the folder. Nothing to install.
 
@@ -22,14 +29,29 @@ without restyling.
 The cover uses Jana Thork and Kepler Std, matching the Domus Aurea podcast cover.
 The artwork is the Visitation from a twelfth-century Aquitaine psalter.
 
-## Signup form
+## Registration
 
-Posts to a Kit form dedicated to this cohort. Double opt-in is off.
+Registration and payment happen entirely on the Kit product page:
 
-The form targets a hidden iframe rather than submitting through `fetch`. This is
-deliberate: a background `fetch` is blocked by CORS, including from pages opened
-directly from disk. A small script swaps in an inline confirmation afterward, and
-with JavaScript disabled the plain form post still works.
+```
+https://my-secret-is-mine.kit.com/products/under-the-mantle-of-mary-the-feminine-
+```
+
+The page collects nothing itself. There is no form, no Kit script, and no
+third-party JavaScript of any kind. All three calls to action, the header
+button, the hero button, and the register band at the foot of the page, point
+at that one URL. If the course price, the dates, or the product URL change,
+those three links and the register band copy are the only places to edit.
+
+Two names are in play: this page says *Under Mary's Mantle: The Feminine Soul*
+and the Kit product says *Under the Mantle of Mary: The Feminine Soul*. They
+should be reconciled in Kit.
+
+Through August 12, 2026, the page was a waitlist with an embedded Kit form,
+uid `62ddea07c5`. That form still exists in Kit and holds the pre-launch list.
+It is no longer referenced here. If a future cohort needs a waitlist again, the
+embed and its styling are recoverable from the git history, commit `b7bff94`
+and earlier.
 
 ## Deploying
 
